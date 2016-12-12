@@ -9,31 +9,54 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="rimp.rild.com.android.android_count_down_timer.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:id="@+id/textView"
-        android:textSize="32sp"
-        android:layout_marginTop="31dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <Button
+        android:id="@+id/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+"
-        android:id="@+id/plus_button"
-        android:layout_marginTop="29dp"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:text="start" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"
-        android:id="@+id/minus_button"
-        android:layout_below="@+id/plus_button"
-        android:layout_alignLeft="@+id/plus_button"
-        android:layout_alignStart="@+id/plus_button" />
+    <FrameLayout
+        android:background="@color/base_color_white"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/timer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textSize="64sp" />
+
+        <ProgressBar
+            android:id="@+id/progress_interval"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:max="500"
+            android:progress="0"
+            android:progressDrawable="@drawable/circular" />
+
+        <ProgressBar
+            android:id="@+id/progress_total"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:max="500"
+            android:progress="0"
+            android:progressDrawable="@drawable/circular_dk" />
+    </FrameLayout>
+
 </RelativeLayout>
